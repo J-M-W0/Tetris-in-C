@@ -188,24 +188,6 @@ SDL_bool JUNZHE_init() {
     }
     SDL_LogInfo( SDL_LOG_CATEGORY_APPLICATION, "TTF subsytem initialized.\n" );
 
-    /*
-    char fontPath[1024];
-    bzero(fontPath, sizeof(fontPath));
-    snprintf(fontPath, sizeof(fontPath), "OpenSans-Regular.ttf");
-    if ( !JUNZHE_loadFont( fontPath ) ) {
-        SDL_LogError( SDL_LOG_CATEGORY_ERROR, "Failed at load_font()\n" );
-        SDL_DestroyWindow( gWindow );
-        gWindow = NULL;
-        SDL_DestroyRenderer( gRenderer );
-        gRenderer = NULL;
-        TTF_Quit();
-        IMG_Quit();
-        SDL_Quit();
-        return SDL_FALSE;
-    }
-    SDL_LogInfo( SDL_LOG_CATEGORY_APPLICATION, "OpenSans-Regular.ttf font loaded.\n" );
-    */
-    
     SDL_StartTextInput();
     return SDL_TRUE;
 }
